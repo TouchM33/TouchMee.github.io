@@ -4,61 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panduan Hidup Islami</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        /* Tombol hamburger */
+        .menu-toggle {
+            display: none;
+            background: #01579b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #01579b;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            padding: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #0288d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #01579b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Responsif: tampilkan tombol menu saat layar kecil */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                background: #01579b;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>⭐ Panduan Hidup Islami</header>
+<header>⭐ Panduan Hidup Islami ⭐</header>
 
+<!-- Tombol Menu -->
+<button class="menu-toggle">☰ Menu</button>
+
+<!-- Navigasi -->
 <nav>
     <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="sholat.html">Panduan Sholat</a></li>
-        <li><a href="puasa.html">Panduan Puasa</a></li>
-        <li><a href="zakat.html">Kalkulator Zakat</a></li>
-        <li><a href="haji.html">Panduan Haji</a></li>
-        <li><a href="forum.html">Forum</a></li>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Panduan Sholat</a></li>
+        <li><a href="#">Panduan Puasa</a></li>
+        <li><a href="#">Panduan Haji</a></li>
+        <li><a href="#">Kalkulator Zakat</a></li>
+        <li><a href="#">Forum</a></li>
     </ul>
 </nav>
 
+<!-- Konten -->
 <div class="container">
-    <h1>🌟 Selamat Datang di Panduan Hidup Islami</h1>
+    <h1>⭐ Selamat Datang di Panduan Hidup Islami</h1>
     <p>Menjadi pribadi lebih baik dengan ilmu dan ibadah.</p>
-
-    <div class="motivasi">
-        <h2>🕋 Mengapa Kita Harus Belajar Agama?</h2>
-        <p>Allah Maha Pengampun dan selalu membuka pintu taubat bagi hamba-Nya. Ilmu agama membimbing kita agar sukses dunia & akhirat.</p>
-    </div>
 
     <div class="section">
         <h2>📖 Kumpulan Doa Sehari-hari</h2>
         <p>Doa harian lengkap dengan teks Arab, Latin, dan artinya.</p>
-        <a href="doa.html">Lihat Doa</a>
+        <a href="#">Lihat Doa</a>
     </div>
-
-    <div class="section">
-        <h2>📚 Kisah Inspiratif Islami</h2>
-        <p>Kisah nabi, sahabat, dan ulama yang menginspirasi.</p>
-        <a href="kisah.html">Baca Kisah</a>
-    </div>
-
-    <div class="section">
-        <h2>📜 Al-Qur’an Digital + Tafsir</h2>
-        <p>Baca Al-Qur’an langsung dengan tafsir singkat.</p>
-        <a href="quran.html">Baca Al-Qur’an</a>
-    </div>
-
-    <div class="section">
-        <h2>🗓️ Agenda Ibadah</h2>
-        <p>Checklist ibadah harian & mingguan agar lebih istiqomah.</p>
-        <a href="agenda.html">Lihat Agenda</a>
-    </div>
-
 </div>
 
 <footer>
     &copy; 2025 Panduan Hidup Islami - Semua Hak Dilindungi
 </footer>
+
+<script>
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+        document.querySelector("nav ul").classList.toggle("active");
+    });
+</script>
 
 </body>
 </html>
