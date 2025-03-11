@@ -1,89 +1,63 @@
-/* Reset and general styling */
+/* Reset dan styling dasar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa; /* Warna hijau muda sebagai latar belakang */
+    background-color: #e0f7fa; /* Warna hijau muda */
 }
 
-/* Navigation styling */
+/* Styling Navigasi */
 nav {
-    background-color: #4caf50; /* Warna hijau untuk navigasi */
-    padding: 10px 0; /* Padding atas dan bawah */
+    background-color: #4caf50; /* Warna hijau navigasi */
+    padding: 10px 0;
+    width: 100%;
+    position: fixed; /* Biar selalu di atas */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Supaya di atas elemen lain */
 }
 
 nav ul {
-    display: flex; /* Flexbox untuk merapikan menu */
-    justify-content: center; /* Membuat menu rata tengah */
+    display: flex;
+    justify-content: center; /* Posisi menu ke tengah */
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 nav ul li {
-    margin: 0 20px; /* Jarak antar item menu */
+    margin: 0 15px; /* Jarak antar menu */
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 20px; /* Menambah padding agar lebih nyaman di klik */
+    padding: 12px 15px;
     display: block;
 }
 
 nav ul li a:hover {
-    background-color: #45a049; /* Efek saat hover */
-    border-radius: 5px; /* Membuat sudut lebih lembut saat hover */
+    background-color: #45a049;
+    border-radius: 5px;
 }
 
-/* Container for main content */
+/* Biar kontennya gak ketutupan navigasi */
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 80px auto 0; /* Tambah margin biar ga ketutup navbar */
     padding: 20px 0;
     text-align: center;
 }
 
-/* Styling for headings and paragraphs */
-h2 {
-    font-size: 28px;
-    color: #333;
-}
-
-h3 {
-    font-size: 24px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Styling for the button */
-.btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-
-/* Footer styling */
+/* Styling footer */
 footer {
     background-color: #2d2d2d;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
+    position: fixed;
     bottom: 0;
 }
