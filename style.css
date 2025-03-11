@@ -1,9 +1,11 @@
 /* Style for header and navigation */
 header {
-    padding: 10px;
+    padding: 20px; /* Mengurangi padding agar nggak terlalu tinggi */
     background-color: #333;
     color: #fff;
     text-align: center;
+    font-size: 1.8em; /* Mengurangi ukuran font agar lebih proporsional */
+    margin-bottom: 20px; /* Menambahkan jarak bawah untuk pemisah dengan konten */
 }
 
 nav {
