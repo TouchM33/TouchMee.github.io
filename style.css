@@ -22,12 +22,13 @@ nav ul {
     justify-content: center; /* Posisi menu ke tengah */
     align-items: center;
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Biar responsif, gak kepanjangan */
 }
 
 nav ul li {
-    margin: 0 15px; /* Jarak antar menu */
+    margin: 5px 10px; /* Biar gak dempet */
 }
 
 nav ul li a {
@@ -36,6 +37,7 @@ nav ul li a {
     font-size: 18px;
     padding: 12px 15px;
     display: block;
+    white-space: nowrap; /* Biar teks nggak turun ke bawah */
 }
 
 nav ul li a:hover {
@@ -45,13 +47,14 @@ nav ul li a:hover {
 
 /* Biar kontennya gak ketutupan navigasi */
 .container {
-    width: 80%;
-    margin: 80px auto 0; /* Tambah margin biar ga ketutup navbar */
-    padding: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 0; /* Tambah margin biar ga ketutup navbar */
+    padding: 20px;
     text-align: center;
 }
 
-/* Styling footer */
+/* Footer styling */
 footer {
     background-color: #2d2d2d;
     color: white;
