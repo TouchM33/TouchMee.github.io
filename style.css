@@ -1,82 +1,51 @@
-/* Style for header and navigation */
-header {
-    padding: 20px; /* Mengurangi padding agar nggak terlalu tinggi */
-    background-color: #2E7D32; /* Hijau tua untuk kesan religius dan tenang */
-    color: #fff;
-    text-align: center;
-    font-size: 1.8em; /* Mengurangi ukuran font agar lebih proporsional */
-    margin-bottom: 20px; /* Menambahkan jarak bawah untuk pemisah dengan konten */
-}
+<!DOCTYPE html>
+<html lang="id">
 
-nav {
-    background-color: #388E3C; /* Hijau lebih terang untuk navigasi */
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Panduan Hidup Islami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
+<body>
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
+    <header>
+        <h1>Sama-sama menjadi lebih baik</h1> <!-- Judul header diubah sesuai permintaan -->
+    </header>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-}
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="sholat/index.html">Panduan Sholat</a></li>
+            <li><a href="puasa.html">Panduan Puasa</a></li>
+            <li><a href="zakat.html">Kalkulator Zakat</a></li>
+            <li><a href="haji.html">Panduan Haji</a></li>
+            <li><a href="doa.html">Kumpulan Doa</a></li>
+            <li><a href="forum.html">Forum Diskusi</a></li>
+        </ul>
+    </nav>
 
-nav ul li a:hover {
-    background-color: #66BB6A; /* Warna hijau muda saat hover */
-}
+    <div class="container">
+        <h2>🌟 Selamat Datang di Panduan Hidup Islami</h2>
+        <p>Sama-sama menjadi lebih baik dengan ilmu dan ibadah.</p>
 
-/* Container styling */
-.container {
-    text-align: center;
-    margin: 20px;
-}
+        <section>
+            <h3>📖 Mengapa Kita Harus Belajar Agama?</h3>
+            <p>Allah Maha Pengampun dan selalu membuka pintu taubat bagi hamba-Nya. Ilmu agama membimbing kita agar sukses dunia & akhirat.</p>
+        </section>
 
-/* Section for Allah's message */
-section {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #f0f4c3; /* Latar belakang krem lembut untuk suasana tenang */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        <section>
+            <h3>📚 Kumpulan Doa Sehari-hari</h3>
+            <p>Doa harian lengkap dengan teks Arab, Latin, dan artinya.</p>
+            <a href="doa.html" class="btn">Lihat Doa</a>
+        </section>
+    </div>
 
-section h3 {
-    font-size: 1.8em;
-    color: #2E7D32; /* Warna hijau tua pada heading untuk nuansa religius */
-}
+    <footer>
+        <p>&copy; 2025 Panduan Hidup Islami</p>
+    </footer>
 
-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
-}
+</body>
 
-section blockquote {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #E8F5E9; /* Hijau muda untuk latar belakang quote */
-    border-left: 5px solid #66BB6A; /* Border hijau muda untuk quote */
-    font-style: italic;
-    color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #2E7D32; /* Sama dengan header, agar konsisten */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+</html>
