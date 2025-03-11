@@ -6,21 +6,6 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Header styling */
-header {
-    background-color: #2d2d2d;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    font-size: 32px; /* Ukuran font untuk judul header lebih kecil agar lebih proporsional */
-    margin: 0;
-    font-weight: bold; /* Menebalkan font agar lebih mencolok */
-    text-transform: uppercase; /* Membuat judul header semua huruf kapital */
-}
-
 /* Navigation styling */
 nav ul {
     background-color: #333;
