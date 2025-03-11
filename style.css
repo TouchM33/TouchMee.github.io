@@ -14,22 +14,35 @@ header {
     font-size: 24px;
 }
 
+nav {
+    background: #01579b;
+    text-align: center;
+    padding: 10px 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    background: #01579b;
-    text-align: center;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    padding: 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #0277bd;
+    border-radius: 5px;
 }
 
 .container {
@@ -45,16 +58,6 @@ nav ul li a {
     margin: 15px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #0288d1;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 footer {
