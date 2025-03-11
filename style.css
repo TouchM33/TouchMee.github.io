@@ -3,27 +3,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #e0f7fa; /* Warna hijau muda sebagai latar belakang */
 }
 
 /* Navigation styling */
 nav ul {
-    background-color: #333;
+    background-color: #4caf50; /* Warna hijau lebih gelap untuk navigasi */
     margin: 0;
     padding: 10px;
     text-align: center;
     list-style: none;
+    display: flex;
+    justify-content: center; /* Mengatur agar menu tertata rapi */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 20px; /* Mengatur jarak antar menu */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 15px; /* Menambah padding untuk klik yang lebih nyaman */
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #45a049; /* Warna saat hover pada link */
+    border-radius: 5px; /* Membuat sudut lebih lembut saat hover */
 }
 
 /* Container for main content */
