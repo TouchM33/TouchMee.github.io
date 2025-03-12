@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi - Panduan Hidup Islami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Forum Diskusi</h1>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>Diskusi Terbaru</h2>
+            <div id="forum-messages"></div>
+            <textarea id="user-message" placeholder="Tulis pesan..."></textarea>
+            <button onclick="postMessage()">Kirim</button>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", loadMessages);
+        
+        function loadMessages() {
+            let messages = JSON.parse(localStorage.getItem("forumMessages")) || [];
+            let forumDiv = document.getElementById("forum-messages");
+            forumDiv.innerHTML = "";
+            messages.forEach(msg => {
+                let p = document.createElement("p");
+                p.textContent = msg;
+                forumDiv.appendChild(p);
+            });
+        }
+
+        function postMessage() {
+            let messageBox = document.getElementById("user-message");
+            let message = messageBox.value.trim();
+            if (message) {
+                let messages = JSON.parse(localStorage.getItem("forumMessages")) || [];
+                messages.push(message);
+                localStorage.setItem("forumMessages", JSON.stringify(messages));
+                messageBox.value = "";
+                loadMessages();
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Panduan Hidup Islami</p>
+    </footer>
+</body>
+</html>
