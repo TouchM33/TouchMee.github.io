@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zakat - Panduan Hidup Islami</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function hitungZakat() {
+            let penghasilan = parseFloat(document.getElementById("penghasilan").value) || 0;
+            let emas = parseFloat(document.getElementById("emas").value) || 0;
+            let perdagangan = parseFloat(document.getElementById("perdagangan").value) || 0;
+            let fitrah = parseFloat(document.getElementById("fitrah").value) || 0;
+            
+            let zakatPenghasilan = penghasilan >= 520 ? (penghasilan * 2.5 / 100) : 0;
+            let zakatEmas = emas >= 85 ? (emas * 2.5 / 100) : 0;
+            let zakatPerdagangan = perdagangan * 2.5 / 100;
+            let zakatFitrah = fitrah * 30000;
+            
+            document.getElementById("hasil").innerHTML = `
+                <p>Zakat Penghasilan: Rp ${zakatPenghasilan.toFixed(2)}</p>
+                <p>Zakat Emas/Perak: Rp ${zakatEmas.toFixed(2)}</p>
+                <p>Zakat Perdagangan: Rp ${zakatPerdagangan.toFixed(2)}</p>
+                <p>Zakat Fitrah: Rp ${zakatFitrah.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Zakat</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Hitung Zakat Anda</h2>
+        <p>Masukkan jumlah harta yang Anda miliki untuk menghitung zakat yang harus dikeluarkan.</p>
+        
+        <label>Penghasilan per bulan (Rp):</label>
+        <input type="number" id="penghasilan" placeholder="Masukkan jumlah...">
+        
+        <label>Jumlah emas/perak (gram):</label>
+        <input type="number" id="emas" placeholder="Masukkan jumlah gram...">
+        
+        <label>Keuntungan dagang (Rp):</label>
+        <input type="number" id="perdagangan" placeholder="Masukkan jumlah...">
+        
+        <label>Jumlah orang untuk zakat fitrah:</label>
+        <input type="number" id="fitrah" placeholder="Masukkan jumlah orang...">
+        
+        <button onclick="hitungZakat()">Hitung Zakat</button>
+        
+        <div id="hasil"></div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Panduan Hidup Islami</p>
+    </footer>
+</body>
+</html>
