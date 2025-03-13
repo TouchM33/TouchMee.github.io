@@ -12,31 +12,9 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Tema Default */
-:root {
-    --bg-color: #f4f4f4;
-    --text-color: #000000;
-    --nav-bg: #a3d9a5;
-    --header-bg: #2c6e49;
-    --nav-text: #333;
-    --button-bg: #2c6e49;
-    --button-hover: #1f5337;
-}
-
-/* Tema Dark Mode */
-.dark-mode {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --nav-bg: #1f5337;
-    --header-bg: #16432a;
-    --nav-text: #f4f4f4;
-    --button-bg: #3b6f54;
-    --button-hover: #2c6e49;
-}
-
 /* Header */
 header {
-    background: var(--header-bg);
+    background: #2c6e49;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -44,7 +22,7 @@ header {
 
 /* Navigasi */
 nav {
-    background: var(--nav-bg);
+    background: #a3d9a5; /* Hijau muda */
     padding: 10px;
 }
 
@@ -53,9 +31,9 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Supaya responsif */
     padding: 0;
-    gap: 15px;
+    gap: 15px; /* Jarak antar menu */
 }
 
 nav ul li {
@@ -64,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--nav-text);
+    color: #333;
     font-weight: bold;
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.7);
@@ -74,14 +52,14 @@ nav ul li a {
 
 /* Hover efek */
 nav ul li a:hover {
-    background: var(--header-bg);
+    background: #2c6e49;
     color: white;
 }
 
 /* Responsif untuk layar kecil */
 @media (max-width: 600px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Menu jadi ke bawah kalau layar kecil */
         align-items: center;
     }
 
@@ -101,34 +79,77 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Tombol Mode Gelap/Terang */
-#theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: var(--button-bg);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-#theme-toggle:hover {
-    background-color: var(--button-hover);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background: var(--header-bg);
+    background: #2c6e49;
     color: white;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Tombol Dark Mode */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Mode Gelap */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+
+/* Warna teks dan latar belakang untuk mode gelap */
+.dark-mode body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Container di mode gelap */
+.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #ffffff; /* Supaya tetap jelas */
+}
+
+/* Warna teks untuk link di mode gelap */
+.dark-mode a {
+    color: #00bcd4; /* Warna biru terang */
+    text-decoration: none;
+}
+
+.dark-mode a:hover {
+    color: #ffcc00; /* Warna kuning saat hover */
+}
+
+/* Warna tombol di mode gelap */
+.dark-mode #theme-toggle {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode #theme-toggle:hover {
+    background-color: #666;
 }
