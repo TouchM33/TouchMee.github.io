@@ -1,12 +1,54 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - Panduan Hidup Islami</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #theme-toggle:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 </head>
+
 <body>
+
+    <!-- Tombol Dark Mode -->
+    <button id="theme-toggle">🌙 Mode Gelap</button>
 
     <!-- Header -->
     <header>
@@ -48,5 +90,32 @@
         <p>&copy; 2025 Panduan Hidup Islami</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            // Cek mode yang tersimpan
+            if (localStorage.getItem("theme") === "dark") {
+                body.classList.add("dark-mode");
+                toggleButton.textContent = "☀️ Mode Terang";
+            }
+
+            // Event listener buat toggle mode
+            toggleButton.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+
+                if (body.classList.contains("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                    toggleButton.textContent = "☀️ Mode Terang";
+                } else {
+                    localStorage.setItem("theme", "light");
+                    toggleButton.textContent = "🌙 Mode Gelap";
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
