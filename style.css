@@ -1,87 +1,134 @@
-<!DOCTYPE html> 
-<html lang="id">
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Panduan Hidup Islami</title>
+/* Tema Default */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000000;
+    --nav-bg: #a3d9a5;
+    --header-bg: #2c6e49;
+    --nav-text: #333;
+    --button-bg: #2c6e49;
+    --button-hover: #1f5337;
+}
 
-    <link rel="stylesheet" href="style.css">
+/* Tema Dark Mode */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --nav-bg: #1f5337;
+    --header-bg: #16432a;
+    --nav-text: #f4f4f4;
+    --button-bg: #3b6f54;
+    --button-hover: #2c6e49;
+}
 
-</head>
+/* Header */
+header {
+    background: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
 
-<body>
+/* Navigasi */
+nav {
+    background: var(--nav-bg);
+    padding: 10px;
+}
 
-    <!-- Tombol Dark Mode -->
-    <button id="theme-toggle">🌙 Mode Gelap</button>
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 15px;
+}
 
-    <!-- Header -->
-    <header>
-        <h1>Panduan Hidup Islami</h1>
-    </header>
+nav ul li {
+    display: inline-block;
+}
 
-    <!-- Navigasi -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="sholat/index.html">Panduan Sholat</a></li>
-            <li><a href="puasa.html">Panduan Puasa</a></li>
-            <li><a href="zakat.html">Kalkulator Zakat</a></li>
-            <li><a href="haji.html">Panduan Haji</a></li>
-            <li><a href="doa.html">Kumpulan Doa</a></li>
-            <li><a href="forum.html">Forum Diskusi</a></li>
-        </ul>
-    </nav>
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: bold;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
-    <!-- Konten -->
-    <div class="container">
-        <h2>🌟 Sama-sama Menjadi Lebih Baik</h2>
-        <p>Menjadi pribadi lebih baik dengan ilmu dan ibadah.</p>
+/* Hover efek */
+nav ul li a:hover {
+    background: var(--header-bg);
+    color: white;
+}
 
-        <section>
-            <h3>📖 Allah Maha Pengampun</h3>
-            <p>Allah Maha Pengampun dan selalu membuka pintu taubat bagi hamba-Nya. Ilmu agama membimbing kita agar sukses dunia & akhirat.</p>
-        </section>
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        <section>
-            <h3>📚 Kumpulan Doa Sehari-hari</h3>
-            <p>Doa harian lengkap dengan teks Arab, Latin, dan artinya.</p>
-            <a href="doa.html" class="btn">Lihat Doa</a>
-        </section>
-    </div>
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Panduan Hidup Islami</p>
-    </footer>
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggleButton = document.getElementById("theme-toggle");
-            const body = document.body;
+/* Container utama */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-            // Cek mode yang tersimpan
-            if (localStorage.getItem("theme") === "dark") {
-                body.classList.add("dark-mode");
-                toggleButton.textContent = "☀️ Mode Terang";
-            }
+/* Tombol Mode Gelap/Terang */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
 
-            // Event listener buat toggle mode
-            toggleButton.addEventListener("click", function () {
-                body.classList.toggle("dark-mode");
+#theme-toggle:hover {
+    background-color: var(--button-hover);
+}
 
-                if (body.classList.contains("dark-mode")) {
-                    localStorage.setItem("theme", "dark");
-                    toggleButton.textContent = "☀️ Mode Terang";
-                } else {
-                    localStorage.setItem("theme", "light");
-                    toggleButton.textContent = "🌙 Mode Gelap";
-                }
-            });
-        });
-    </script>
-
-</body>
-
-</html>
+/* Footer */
+footer {
+    text-align: center;
+    background: var(--header-bg);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
